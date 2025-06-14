@@ -20,7 +20,7 @@ person3.contact.phone.contactNum2 = "620868XXXX"; // update in person as well
 console.log(person);
 console.log(person3);
 
-const person4 = Object.assign(person); // Shallow copy op person
+const person4 = Object.assign(person4, person); // Shallow copy of person
 console.log(person4);
 
 const person5 = JSON.parse(JSON.stringify(person)); // Deep copy of person object
