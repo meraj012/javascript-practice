@@ -44,5 +44,4 @@ async function loadData() {
     console.error("Error loading data:", err.message);
   }
 }
-
 loadData();
