@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Event Example</title>
+  </head>
+  <body>
+    <button id="myButton" style="display:flex, margi;">Click Me</button>
+
+    <script>
+      const button = document.getElementById("myButton");
+
+      // Step 1: Add an event listener for the custom event
+      button.addEventListener("myCustomEvent", function (e) {
+        alert("Custom event triggered with data: " + e.detail);
+      });
+
+      // Step 2: Trigger the custom event when the button is clicked
+      button.addEventListener("click", function () {
+        // Create a custom event with some detail/data
+        const customEvent = new CustomEvent("myCustomEvent", {
+          detail: "Hello from custom event!",
+        });
+
+        // Dispatch the custom event
+        button.dispatchEvent(customEvent);
+      });
+    </script>
+  </body>
+</html>
